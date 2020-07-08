@@ -1,5 +1,6 @@
 import java.util.Comparator;
 
+
 public class MergeSort {
 	
 	
@@ -79,6 +80,7 @@ public class MergeSort {
 	
 	
 	
+	
 	// Recursive method to carry out merge sort on the array of strings
 	
 	// Merge sort algorithm divides the array into two halves 
@@ -154,8 +156,52 @@ public class MergeSort {
 	
 	
 
+	
+	// Program starting point
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		
+		// Testing merge sort on the array of integers ---------------------------------------------------//
+		
+		// Initialize a new array & Implement merge sort on it and safe the result into a new array
+		int[] originalArray = {7, 10, 9, 4, 1, -20, -7, 6, 15, 17};
+		int[] mergeSortedArray = mergeSort(originalArray);
+		
+		
+		// Print out the original array
+		for (int i = 0; i < originalArray.length; i++)
+			System.out.print(originalArray[i] + " ");
+		 
+		// Break line
+		System.out.println();
+		
+		// Print out the sorted array		
+		for (int i = 0; i < mergeSortedArray.length; i++)
+			System.out.print(mergeSortedArray[i] + " ");
+		
+		// Break line
+		System.out.println();
+		
+		
+		// Testing merge sort on the array of strings ---------------------------------------------------//
+		
+		// Initialize a new array & Implement merge sort on it and safe the result into a new array
+		String [] originalArrayStr = {"bc", "a", "hijkl", "defg", "mnopqrs"};
+		Comparator<String> compareByLength =  (s1, s2) -> s1.length() - s2.length();
+		String[] mergeSortArrayStr = mergeSort(originalArrayStr, compareByLength);
+		
+		
+		
+		// Print out the original array
+		for (int i = 0; i < originalArrayStr.length; i++)
+			System.out.print(originalArrayStr[i] + " ");
+		 
+		// Break line
+		System.out.println();
+		
+		// Print out the sorted array
+		for (int i = 0; i < mergeSortArrayStr.length; i++)
+			System.out.print(mergeSortArrayStr[i] + " ");
 
 	}
 
